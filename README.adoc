@@ -1,0 +1,59 @@
+# audio-feedback-visual
+= Audio Feedback Visual
+
+El programa de feedback visual de audio, o <<nombre con onda>>,  sirve para darle un paciente una noción del volumen de los ruidos que produce, ya sean percusivos o hablando.
+
+Hay una serie de parametros que se pueden cambiar según la modalidad y las condiciones sonoras del lugar.
+
+
+== Instalación
+
+Lo primero a tener en cuenta es el sistema operativo usado, ya que existen dos versiones diferentes del programa. Una de 32 bits y otra de 64 bits.
+
+La versión de windows es indiferente (sea vista, windows 7, windows 8, etc), lo que importa es si es un sistema operativo de 32 bits o 64 bits ( a veces también llamados 32x o 64x).
+
+Una vez sabido ese dato, hacer lo siguiente:
+
+. Descargar el archivo `audio-feedback.7z` ( si es para 64 bits ) o `audio-feedback-32.7z` (si es para 32 bits)
+. Descomprimirlo en la carpeta deseada
+. Abrir la carpeta y navegar al archivo feedback-visual.exe y abrirlo
+
+
+== Configuración
+
+=== Encendido y Apagado
+
+Para encender o apagar el audio, dar click en el botón con el ícono del micrófono.
+
+[TIP]
+Se puede también alternar entre prendido y apagado con la tecla ESPACIO, o se puede también apagar con la tecla ESCAPE.
+
+=== Modos
+
+El programa tiene dos modos diferentes, uno pensado para canto y otro para percusión. La diferencia está en que el modo percusión busca picos en volumen y registra sólo el pico, mientras que el modo canto promedia el volumen entre las últimas fracciones de segundo para alisar los silencios entre sílabas y registra el volumen a intervalos regulares siempre que haya sonido.
+
+Para elegir un modo u otro, elegir entre ambas opciones en el menú de la derecha.
+
+=== Objetivo
+
+Existen 3 opciones predeterminadas a elegir,
+
+también se peude elegir una opción intermedia dando click en la barra
+
+el color de la barra  depende de lo lejos que esté del objetivo, sea por arriba o por debajo
+=== Ajuste Fino
+
+
+Para reducir rudio de ambiente se puede
+
+filtro graves 
+filtro agudo
+
+filtro ruido:  si el volumen del audio en un determinado momento es menor que x, se considera que hay silencio y no se registra nada
+
+
+== Registros
+
+Segun el modo, varia el intervalo de los registros, pero los valores son los mismos
+
+el valor diferencia es relativo al objetivo seleccionado
