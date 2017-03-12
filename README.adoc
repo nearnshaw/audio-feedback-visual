@@ -1,22 +1,36 @@
 # audio-feedback-visual
 = Audio Feedback Visual
 
-El programa de feedback visual de audio, o <<nombre con onda>>,  sirve para darle un paciente una noción del volumen de los ruidos que produce, ya sean percusivos o hablando.
+El programa de feedback visual de audio, o [acepto sugerencias de nombres con mas onda],  sirve para darle un paciente una noción del volumen de los ruidos que produce, ya sean percusivos o hablados.
 
-Hay una serie de parametros que se pueden cambiar según la modalidad y las condiciones sonoras del lugar.
+El programa tambien produce archivos de log, en formato CSV (datos separados por coma), que pueden utilizarse para medir el progreso de un paciente a lo largo del tiempo.
+
+Existen tambien una serie de parametros que se pueden ajustar según las condiciones sonoras del lugar, para filtrar ruidos indeseados.
 
 
 == Instalación
 
-Lo primero a tener en cuenta es el sistema operativo usado, ya que existen dos versiones diferentes del programa. Una de 32 bits y otra de 64 bits.
+Lo primero a tener en cuenta es el sistema operativo usado, ya que existen dos versiones diferentes del programa. Una de 32 bits y otra de 64 bits. Cada una corre unicamente en computadoras con sistemas operativos compatibles.
 
+[NOTE]
 La versión de windows es indiferente (sea vista, windows 7, windows 8, etc), lo que importa es si es un sistema operativo de 32 bits o 64 bits ( a veces también llamados 32x o 64x).
 
 Una vez sabido ese dato, hacer lo siguiente:
 
 . Descargar el archivo `audio-feedback.7z` ( si es para 64 bits ) o `audio-feedback-32.7z` (si es para 32 bits)
 . Descomprimirlo en la carpeta deseada
-. Abrir la carpeta y navegar al archivo feedback-visual.exe y abrirlo
+. Abrir la carpeta `adudio-feedback`  (o `audio-feedback-32`) y abrir el archivo `audio-feedback.exe` (o `audio-feedback-32.exe`)
+
+Listo!  El programa no requiere instalacion.
+
+[WARNING]
+====
+En caso de que al intentar abrir el programa surja un mensaje de error alertando sobre la falta de paquetes o librerias de Visual C++ o similar, es porque a la computadora le faltan algunos complementos instalados. Lo que hay que hacer es descargar estas librerias desde la pagina de Microsoft. Es rapido, facil y gratuito.
+
+Hay que instalar *Paquetes redistribuibles de Visual C++ para Visual Studio 2013*
+
+Desde el siguiente link: https://www.microsoft.com/es-ar/download/details.aspx?id=40784
+====
 
 
 == Configuración
