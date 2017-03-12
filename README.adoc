@@ -33,41 +33,89 @@ Desde el siguiente link: https://www.microsoft.com/es-ar/download/details.aspx?i
 ====
 
 
-== Configuración
+== Uso Basico
 
 === Encendido y Apagado
 
 Para encender o apagar el audio, dar click en el botón con el ícono del micrófono.
 
+image:
+
 [TIP]
-Se puede también alternar entre prendido y apagado con la tecla ESPACIO, o se puede también apagar con la tecla ESCAPE.
+Se puede sino alternar entre prendido y apagado con la tecla ESPACIO, o se puede también apagar con la tecla ESCAPE.
+
+Una vez encendido, se puede ver el volumen actual captado por el microfono en la barra ancha, la cual cambia de color segun que tan alejado esta ese volumen del volumen objetivo.
 
 === Modos
 
-El programa tiene dos modos diferentes, uno pensado para canto y otro para percusión. La diferencia está en que el modo percusión busca picos en volumen y registra sólo el pico, mientras que el modo canto promedia el volumen entre las últimas fracciones de segundo para alisar los silencios entre sílabas y registra el volumen a intervalos regulares siempre que haya sonido.
+El programa tiene dos modos diferentes, uno pensado para medir el volumen del canto y otro para percusión. La diferencia está en que el modo percusión busca picos en volumen y registra sólo el pico, mientras que el modo canto promedia el volumen entre las últimas fracciones de segundo para alisar los silencios entre sílabas y registra el volumen a intervalos regulares siempre que haya sonido.
 
 Para elegir un modo u otro, elegir entre ambas opciones en el menú de la derecha.
 
-=== Objetivo
+image:
 
-Existen 3 opciones predeterminadas a elegir,
+=== Volumen Objetivo
 
-también se peude elegir una opción intermedia dando click en la barra
+Puede asignarse un objetivo de volumen para la sesion. Uno puede elegir entre los siguientes valores predeterminados, presionando el boton correspondiente:
 
-el color de la barra  depende de lo lejos que esté del objetivo, sea por arriba o por debajo
+* "Grito" - 80 dB
+* "Conversacion" - 55 dB
+* "Susurro" - 30 dB
+
+Tambien se puede elegir un valor mas especifico, fuera de esas tres opciones, simplemente dando click a la altura deseada en la barra marron de la izquierda.
+
+*En que impacta lo que se elige como objetivo?*
+
+* La barra marron de la izquiera muestra el nivel objetivo. Al estar alineado con la barra del volumen, es una referencia a que tan cerca se esta de este.
+* El color de la barra de volumen cambia de Verde a Roja segun que tan lejos esta el volumen del objetivo. Mientras mas lejos (tanto por arriba como por debajo) mas roja.
+* Entre los valores que se registran en el archivo de log, uno de ellos es la diferencia entre el volumen actual y el objetivo.
+
 === Ajuste Fino
 
+El programa incluye una serie de ajustes finos para poder remover ruidos de ambiente y otros ajustes, como compensar por mayor o menor distancia del microfono.
 
-Para reducir rudio de ambiente se puede
+En la mayoria de los casos, no es necesario tocar nada de esto, ya que los valores por defecto estan pensados para ser los indicados. Hay que tomar en cuenta que si se desea hacer un seguimiento de un paciente a lo largo del tiempo, se debe siempre tener consistencia en lo que se setea en estos para poder comparar mediciones iguales.
 
-filtro graves 
-filtro agudo
+El ajuste fino permite:
 
-filtro ruido:  si el volumen del audio en un determinado momento es menor que x, se considera que hay silencio y no se registra nada
+* *Filtrar graves* (es decir, ignorar frecuencias graves por debajo de X)
+* *Filtrar agudos* (es decir, ignorar frecuencias agudas por encima de X)
+* *Eliminar ruido* (es decir, no registrar nada cuando en un dado momento el volumen se encuentre por debajo de un humbral)
+* *Amplificar* (es decir, multiplicar o dividir el volumen proporcionalmente)
+
+
+image:
 
 
 == Registros
 
-Segun el modo, varia el intervalo de los registros, pero los valores son los mismos
+El programa permite crear registros de datos de la sesion, en formato CSV (datos separados por comas).
 
-el valor diferencia es relativo al objetivo seleccionado
+=== Como Registrar Datos
+
+Al prender el microfono, ya se empieza a registrar. Se puede pausar y reanudar el microfono, y los registros no se perderan hasta que se cierre el programa. Estos datos no se guardan en ningun lado permanente, a menos que al finalizar la sesion se presione la tecla *Guardar*. En ese momento, todos los datos que habian sido guardados desde que se prendio el programa son guardados en un archivo de tipo `.csv` en la carpeta `audio-feedback`.
+
+Este archivo tendra un nombre toma el nombre del paciente + la fecha, tomando los datos del formulario dentro del programa:
+
+image:
+
+En caso de que ya exista un archivo con ese mismo nombre (mismo paciente y misma fecha), se agregara un [1] al final del nombre (o un [2], [3], etc) para no sobreescribir datos.
+
+En caso de que la sesion contenga solo datos indeseados, se puede presionar el boton `Borrar Datos` para limpiar la memoria del programa y comenzar a grabar denuevo sin aquello. Esto borra solo los datos que esten actualmente registrados por el programa en la sesion actual y que no hayan sido grabados a un archivo. Presionar este boton no tiene efecto sobre los datos que ya han sido guardados y registrados en archivos csv.
+
+
+=== Que datos se registran
+
+Cada fila es un registro, que contiene los siguientes datos:
+
+* La hora 
+
+
+ hora, vol DB , objetivo DB , diferencia DB, freq , Nota MIDI cr
+
+
+
+El intervalo al que se registran datos depende del modo elegido:
+
+* Si el modo es `canto`, se registra una nueva fila cada 100 millisegundos
+* Se el modo es `percusion`, se registra una nueva fila solo cuando se reconoce un pico en el audio, que se atribuye a un golpe percusivo.
