@@ -108,12 +108,12 @@ En caso de que la sesion contenga solo datos indeseados, se puede presionar el b
 
 Cada fila es un registro, que contiene los siguientes datos:
 
-* La hora 
-
-
- hora, vol DB , objetivo DB , diferencia DB, freq , Nota MIDI cr
-
-
+* Una `s` que marca el comienzo de la fila
+* El volumen registrado, en eB
+* El volumen objetivo seleccionado para la sesion, en dB
+* La diferencia entre el volumen registrado y el objetivo, en dB
+* La frequencia predominante del sonido, en oscilaciones
+* La nota musical predominante del sonido, representada como nota MIDI
 
 El intervalo al que se registran datos depende del modo elegido:
 
