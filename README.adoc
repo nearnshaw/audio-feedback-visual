@@ -1,4 +1,3 @@
-# audio-feedback-visual
 = Audio Feedback Visual
 
 El programa de feedback visual de audio, o [acepto sugerencias de nombres con mas onda],  sirve para darle un paciente una noción del volumen de los ruidos que produce, ya sean percusivos o hablados.
@@ -39,12 +38,15 @@ Desde el siguiente link: https://www.microsoft.com/es-ar/download/details.aspx?i
 
 Para encender o apagar el audio, dar click en el botón con el ícono del micrófono.
 
-image:
+image:README-328a8.png[]
+
 
 [TIP]
 Se puede sino alternar entre prendido y apagado con la tecla ESPACIO, o se puede también apagar con la tecla ESCAPE.
 
 Una vez encendido, se puede ver el volumen actual captado por el microfono en la barra ancha, la cual cambia de color segun que tan alejado esta ese volumen del volumen objetivo.
+
+
 
 === Modos
 
@@ -52,7 +54,7 @@ El programa tiene dos modos diferentes, uno pensado para medir el volumen del ca
 
 Para elegir un modo u otro, elegir entre ambas opciones en el menú de la derecha.
 
-image:
+image:README-1284d.png[]
 
 === Volumen Objetivo
 
@@ -62,6 +64,8 @@ Puede asignarse un objetivo de volumen para la sesion. Uno puede elegir entre lo
 * "Conversacion" - 55 dB
 * "Susurro" - 30 dB
 
+image:README-09d97.png[]
+
 Tambien se puede elegir un valor mas especifico, fuera de esas tres opciones, simplemente dando click a la altura deseada en la barra marron de la izquierda.
 
 *En que impacta lo que se elige como objetivo?*
@@ -69,22 +73,6 @@ Tambien se puede elegir un valor mas especifico, fuera de esas tres opciones, si
 * La barra marron de la izquiera muestra el nivel objetivo. Al estar alineado con la barra del volumen, es una referencia a que tan cerca se esta de este.
 * El color de la barra de volumen cambia de Verde a Roja segun que tan lejos esta el volumen del objetivo. Mientras mas lejos (tanto por arriba como por debajo) mas roja.
 * Entre los valores que se registran en el archivo de log, uno de ellos es la diferencia entre el volumen actual y el objetivo.
-
-=== Ajuste Fino
-
-El programa incluye una serie de ajustes finos para poder remover ruidos de ambiente y otros ajustes, como compensar por mayor o menor distancia del microfono.
-
-En la mayoria de los casos, no es necesario tocar nada de esto, ya que los valores por defecto estan pensados para ser los indicados. Hay que tomar en cuenta que si se desea hacer un seguimiento de un paciente a lo largo del tiempo, se debe siempre tener consistencia en lo que se setea en estos para poder comparar mediciones iguales.
-
-El ajuste fino permite:
-
-* *Filtrar graves* (es decir, ignorar frecuencias graves por debajo de X)
-* *Filtrar agudos* (es decir, ignorar frecuencias agudas por encima de X)
-* *Eliminar ruido* (es decir, no registrar nada cuando en un dado momento el volumen se encuentre por debajo de un humbral)
-* *Amplificar* (es decir, multiplicar o dividir el volumen proporcionalmente)
-
-
-image:
 
 
 == Registros
@@ -97,7 +85,7 @@ Al prender el microfono, ya se empieza a registrar. Se puede pausar y reanudar e
 
 Este archivo tendra un nombre toma el nombre del paciente + la fecha, tomando los datos del formulario dentro del programa:
 
-image:
+image:README-acc9d.png[]
 
 En caso de que ya exista un archivo con ese mismo nombre (mismo paciente y misma fecha), se agregara un [1] al final del nombre (o un [2], [3], etc) para no sobreescribir datos.
 
@@ -119,3 +107,19 @@ El intervalo al que se registran datos depende del modo elegido:
 
 * Si el modo es `canto`, se registra una nueva fila cada 100 millisegundos
 * Se el modo es `percusion`, se registra una nueva fila solo cuando se reconoce un pico en el audio, que se atribuye a un golpe percusivo.
+
+=== Ajuste Fino
+
+El programa incluye una serie de ajustes finos para poder remover ruidos de ambiente y otros ajustes, como compensar por mayor o menor distancia del microfono.
+
+En la mayoria de los casos, no es necesario tocar nada de esto, ya que los valores por defecto estan pensados para ser los indicados. Hay que tomar en cuenta que si se desea hacer un seguimiento de un paciente a lo largo del tiempo, se debe siempre tener consistencia en lo que se setea en estos para poder comparar mediciones iguales.
+
+El ajuste fino permite:
+
+* *Filtrar graves* (es decir, ignorar frecuencias graves por debajo de X)
+* *Filtrar agudos* (es decir, ignorar frecuencias agudas por encima de X)
+* *Eliminar ruido* (es decir, no registrar nada cuando en un dado momento el volumen se encuentre por debajo de un humbral)
+* *Amplificar* (es decir, multiplicar o dividir el volumen proporcionalmente)
+
+
+image:README-1cabb.png[]
