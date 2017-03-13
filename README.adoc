@@ -25,10 +25,8 @@ Listo!  El programa no requiere instalacion.
 
 *ADVERTENCIA:* En caso de que al intentar abrir el programa surja un mensaje de error alertando sobre la falta de paquetes o librerias de Visual C++ o similar, es porque a la computadora le faltan algunos complementos instalados. Lo que hay que hacer es descargar estas librerias desde la pagina de Microsoft. Es rapido, facil y gratuito.
 
-Hay que instalar *Paquetes redistribuibles de Visual C++ para Visual Studio 2013*
+Hay que instalar *Paquetes redistribuibles de Visual C++ para Visual Studio 2013* desde el siguiente link: https://www.microsoft.com/es-ar/download/details.aspx?id=40784
 
-Desde el siguiente link: https://www.microsoft.com/es-ar/download/details.aspx?id=40784
-====
 
 
 == Uso Basico
@@ -37,7 +35,7 @@ Desde el siguiente link: https://www.microsoft.com/es-ar/download/details.aspx?i
 
 Para encender o apagar el audio, dar click en el botón con el ícono del micrófono.
 
-image:README-328a8.png[]
+image:images/README-328a8.png[]
 
 
 [TIP]
@@ -53,7 +51,7 @@ El programa tiene dos modos diferentes, uno pensado para medir el volumen del ca
 
 Para elegir un modo u otro, elegir entre ambas opciones en el menú de la derecha.
 
-image:README-1284d.png[]
+image:images/README-1284d.png[]
 
 === Volumen Objetivo
 
@@ -63,7 +61,7 @@ Puede asignarse un objetivo de volumen para la sesion. Uno puede elegir entre lo
 * "Conversacion" - 55 dB
 * "Susurro" - 30 dB
 
-image:README-09d97.png[]
+image:images/README-09d97.png[]
 
 Tambien se puede elegir un valor mas especifico, fuera de esas tres opciones, simplemente dando click a la altura deseada en la barra marron de la izquierda.
 
@@ -84,7 +82,7 @@ Al prender el microfono, ya se empieza a registrar. Se puede pausar y reanudar e
 
 Este archivo tendra un nombre toma el nombre del paciente + la fecha, tomando los datos del formulario dentro del programa:
 
-image:README-acc9d.png[]
+image:images/README-acc9d.png[]
 
 En caso de que ya exista un archivo con ese mismo nombre (mismo paciente y misma fecha), se agregara un [1] al final del nombre (o un [2], [3], etc) para no sobreescribir datos.
 
@@ -121,4 +119,4 @@ El ajuste fino permite:
 * *Amplificar* (es decir, multiplicar o dividir el volumen proporcionalmente)
 
 
-image:README-1cabb.png[]
+image:images/README-1cabb.png[]
