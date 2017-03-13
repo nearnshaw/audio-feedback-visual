@@ -23,6 +23,9 @@ Una vez sabido ese dato, hacer lo siguiente:
 Listo!  El programa no requiere instalacion.
 
 
+image:_images/README-d0c78.png[]
+
+
 *ADVERTENCIA:* En caso de que al intentar abrir el programa surja un mensaje de error alertando sobre la falta de paquetes o librerias de Visual C++ o similar, es porque a la computadora le faltan algunos complementos instalados. Lo que hay que hacer es descargar estas librerias desde la pagina de Microsoft. Es rapido, facil y gratuito.
 
 Hay que instalar *Paquetes redistribuibles de Visual C++ para Visual Studio 2013* desde el siguiente link: https://www.microsoft.com/es-ar/download/details.aspx?id=40784
@@ -35,7 +38,7 @@ Hay que instalar *Paquetes redistribuibles de Visual C++ para Visual Studio 2013
 
 Para encender o apagar el audio, dar click en el botón con el ícono del micrófono.
 
-image:images/README-328a8.png[]
+image:_images/README-328a8.png[]
 
 
 [TIP]
@@ -51,7 +54,7 @@ El programa tiene dos modos diferentes, uno pensado para medir el volumen del ca
 
 Para elegir un modo u otro, elegir entre ambas opciones en el menú de la derecha.
 
-image:images/README-1284d.png[]
+image:_images/README-1284d.png[]
 
 === Volumen Objetivo
 
@@ -61,7 +64,7 @@ Puede asignarse un objetivo de volumen para la sesion. Uno puede elegir entre lo
 * "Conversacion" - 55 dB
 * "Susurro" - 30 dB
 
-image:images/README-09d97.png[]
+image:_images/README-09d97.png[]
 
 Tambien se puede elegir un valor mas especifico, fuera de esas tres opciones, simplemente dando click a la altura deseada en la barra marron de la izquierda.
 
@@ -82,7 +85,7 @@ Al prender el microfono, ya se empieza a registrar. Se puede pausar y reanudar e
 
 Este archivo tendra un nombre toma el nombre del paciente + la fecha, tomando los datos del formulario dentro del programa:
 
-image:images/README-acc9d.png[]
+image:_images/README-acc9d.png[]
 
 En caso de que ya exista un archivo con ese mismo nombre (mismo paciente y misma fecha), se agregara un [1] al final del nombre (o un [2], [3], etc) para no sobreescribir datos.
 
@@ -119,4 +122,4 @@ El ajuste fino permite:
 * *Amplificar* (es decir, multiplicar o dividir el volumen proporcionalmente)
 
 
-image:images/README-1cabb.png[]
+image:_images/README-1cabb.png[]
