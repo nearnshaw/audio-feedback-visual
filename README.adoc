@@ -11,8 +11,8 @@ Existen tambien una serie de parametros que se pueden ajustar según las condici
 
 Lo primero a tener en cuenta es el sistema operativo usado, ya que existen dos versiones diferentes del programa. Una de 32 bits y otra de 64 bits. Cada una corre unicamente en computadoras con sistemas operativos compatibles.
 
-[NOTE]
-La versión de windows es indiferente (sea vista, windows 7, windows 8, etc), lo que importa es si es un sistema operativo de 32 bits o 64 bits ( a veces también llamados 32x o 64x).
+
+*Nota*: La versión de windows es indiferente (sea vista, windows 7, windows 8, etc), lo que importa es si es un sistema operativo de 32 bits o 64 bits ( a veces también llamados 32x o 64x).
 
 Una vez sabido ese dato, hacer lo siguiente:
 
@@ -22,9 +22,8 @@ Una vez sabido ese dato, hacer lo siguiente:
 
 Listo!  El programa no requiere instalacion.
 
-[WARNING]
-====
-En caso de que al intentar abrir el programa surja un mensaje de error alertando sobre la falta de paquetes o librerias de Visual C++ o similar, es porque a la computadora le faltan algunos complementos instalados. Lo que hay que hacer es descargar estas librerias desde la pagina de Microsoft. Es rapido, facil y gratuito.
+
+*ADVERTENCIA:* En caso de que al intentar abrir el programa surja un mensaje de error alertando sobre la falta de paquetes o librerias de Visual C++ o similar, es porque a la computadora le faltan algunos complementos instalados. Lo que hay que hacer es descargar estas librerias desde la pagina de Microsoft. Es rapido, facil y gratuito.
 
 Hay que instalar *Paquetes redistribuibles de Visual C++ para Visual Studio 2013*
 
